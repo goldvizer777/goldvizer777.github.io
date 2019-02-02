@@ -79,18 +79,24 @@
 	<!-- Construct 2 exported games require jQuery. -->
 	<script src="jquery-2.1.1.min.js"></script>
 
-	<script type="text/javascript">
-		function loadAd_menu() {
-			var w = jQuery(window).width();
-			var h = jQuery(window).height();
-			var left = (w/2) - (728/2);
-			var top = h-90;
-			$('#ad').css({'top': top+'px', 'left': left+'px'});
-		}
-		function hideAd() {
-			$('#ad').css({'top': '0px','left':'-999px'});
-		}
-	</script>
+<script type="text/javascript">
+    function loadAd_menu() {
+        var w = jQuery(window).width();
+        var h = jQuery(window).height();
+        var left = (w/2) - (728/2);
+        var top = h-90;
+        $('#ad').css({'top': top+'px', 'left': left+'px'});
+    }
+    function loadAd_levels() {
+        var w = jQuery(window).width();
+        var left = (w/2) - (728/2);
+        var top = 90;
+        $('#ad').css({'top': top+'px', 'left': left+'px'});
+    }
+    function hideAd() {
+        $('#ad').css({'top': '0px','left':'-999px'});
+    }
+</script>
 	
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
@@ -144,15 +150,17 @@
 		};
     </script>
 	
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- html_reklama -->
-	<ins class="adsbygoogle"
-		style="display:inline-block;width:728px;height:90px"
-		data-ad-client="ca-pub-2761916805872924"
-		data-ad-slot="6427897502"></ins>
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
+	<div id="ad" style="position:absolute;">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- html_reklama -->
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:728px;height:90px"
+			data-ad-client="ca-pub-2761916805872924"
+			data-ad-slot="6427897502"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
 
 </body> 
 </html> 
